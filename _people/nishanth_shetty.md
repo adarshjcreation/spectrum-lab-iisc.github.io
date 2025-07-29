@@ -3,7 +3,7 @@ layout: about
 firstname: Nishanth
 lastname: Shetty
 description:  PhD Student
-img: assets/img/people/phd/NishanthShetty.jpeg
+img: assets/img/people/phd/NishanthShetty.jpg
 redirect: https://nishanth-shetty.github.io/
 linkedin_username: nishetty
 github_username: nishanth-shetty
