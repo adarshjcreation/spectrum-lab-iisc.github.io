@@ -3,7 +3,7 @@ layout: about
 firstname: Ashish
 lastname: Verma
 description:  PhD Student
-img: assets/img/people/phd/Default_pfp.jpeg
+img: assets/img/people/phd/Default_pfp.jpg
 redirect: 
 linkedin_username: 
 github_username: 
