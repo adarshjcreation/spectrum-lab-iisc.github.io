@@ -262,8 +262,6 @@ exclude:
   - assets/html/relativity.html
   - projects/
   - repositories/
-  - teaching/
-  - _pages/teaching.md
   - _pages/projects.md
   - _pages/repositories.md
 

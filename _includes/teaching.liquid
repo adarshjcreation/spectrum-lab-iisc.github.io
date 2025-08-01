@@ -1,0 +1,106 @@
+<div class="teaching">
+  <div class="container-md">
+    <h3 class="mb-4">Courses</h3>
+    <div class="courses-grid">
+      {%- assign courses = site.data.teaching -%}
+      {%- for course in courses -%}
+      {% if course.permalink %}
+      <a href="{{ course.permalink }}" class="course-link">
+      {% endif %}
+      <div class="course-card{% if course.permalink %} clickable{% endif %}">
+        <div class="course-content">
+          <h6 class="mb-1 text-primary">{{ course.title }}</h6>
+          <p class="mb-1">{{ course.description }}</p>
+          {% if course.instructor %}
+            <small class="text-muted d-block">Instructor: {{ course.instructor }}</small>
+          {% endif %}
+          {% if course.teaching_assistants and course.teaching_assistants.size > 0 %}
+            <small class="text-muted d-block">TAs: 
+              {% for ta in course.teaching_assistants %}
+                {{ ta }}{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </small>
+          {% endif %}
+        </div>
+        {% if course.semester %}
+        <div class="course-semester">
+          <small class="text-muted">{{ course.semester }}</small>
+        </div>
+        {% endif %}
+      </div>
+      {% if course.permalink %}
+      </a>
+      {% endif %}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<style>
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg, #f9f9f9);
+  padding: 1rem;
+  border-radius: 8px;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.course-content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.course-semester {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+/* Clickable card styling */
+.course-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.course-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.course-card.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Dark mode compatibility */
+html[data-theme="dark"] .course-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+html[data-theme="dark"] .text-muted {
+  color: #aaa !important;
+}
+
+html[data-theme="dark"] .text-primary a {
+  color: #90caf9 !important;
+}
+
+html[data-theme="dark"] a:hover {
+  color: #ffffff;
+}
+</style>
+

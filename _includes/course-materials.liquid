@@ -1,0 +1,194 @@
+{% assign course_data = site.data.teaching | where: "course_id", page.course_id | first %}
+
+<div class="course-materials">
+  <div class="container-md">
+    <!-- Course Info -->
+    <div class="course-info mb-4">
+      <p class="lead mb-2">{{ course_data.description }}</p>
+      <div class="course-meta">
+        {% if course_data.instructor %}
+          <span class="badge badge-primary me-2">{{ course_data.instructor }}</span>
+        {% endif %}
+        {% if course_data.teaching_assistants and course_data.teaching_assistants.size > 0 %}
+          <span class="badge badge-info me-2">TAs: 
+            {% for ta in course_data.teaching_assistants %}
+              {{ ta }}{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </span>
+        {% endif %}
+        {% if course_data.semester %}
+          <span class="badge badge-secondary">{{ course_data.semester }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Course Materials -->
+    <div class="materials-section">
+      <h3 class="mb-4">Course Materials</h3>
+      
+      <!-- Lectures -->
+      {% if page.lectures and page.lectures.size > 0 %}
+      <div class="material-category mb-4">
+        <h4 class="mb-3">📚 Lectures</h4>
+        <div class="materials-grid">
+          {% for lecture in page.lectures %}
+          <div class="material-card">
+            <div class="material-content">
+              <h6 class="mb-1">{{ lecture.title }}</h6>
+              {% if lecture.description %}
+                <p class="mb-2 text-muted">{{ lecture.description }}</p>
+              {% endif %}
+              <div class="material-links">
+                {% if lecture.slides %}
+                  <a href="{{ lecture.slides }}" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                    <i class="fas fa-file-powerpoint"></i> Slides
+                  </a>
+                {% endif %}
+                {% if lecture.video %}
+                  <a href="{{ lecture.video }}" class="btn btn-sm btn-outline-success me-2" target="_blank">
+                    <i class="fas fa-play"></i> Video
+                  </a>
+                {% endif %}
+                {% if lecture.notes %}
+                  <a href="{{ lecture.notes }}" class="btn btn-sm btn-outline-info" target="_blank">
+                    <i class="fas fa-file-alt"></i> Notes
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Assignments -->
+      {% if page.assignments and page.assignments.size > 0 %}
+      <div class="material-category mb-4">
+        <h4 class="mb-3">📝 Assignments</h4>
+        <div class="materials-grid">
+          {% for assignment in page.assignments %}
+          <div class="material-card">
+            <div class="material-content">
+              <h6 class="mb-1">{{ assignment.title }}</h6>
+              {% if assignment.description %}
+                <p class="mb-2 text-muted">{{ assignment.description }}</p>
+              {% endif %}
+              {% if assignment.due_date %}
+                <small class="text-warning mb-2 d-block">Due: {{ assignment.due_date }}</small>
+              {% endif %}
+              <div class="material-links">
+                {% if assignment.pdf %}
+                  <a href="{{ assignment.pdf }}" class="btn btn-sm btn-outline-primary me-2" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Assignment
+                  </a>
+                {% endif %}
+                {% if assignment.solution %}
+                  <a href="{{ assignment.solution }}" class="btn btn-sm btn-outline-success" target="_blank">
+                    <i class="fas fa-check"></i> Solution
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Resources -->
+      {% if page.resources and page.resources.size > 0 %}
+      <div class="material-category mb-4">
+        <h4 class="mb-3">📖 Resources</h4>
+        <div class="materials-grid">
+          {% for resource in page.resources %}
+          <div class="material-card">
+            <div class="material-content">
+              <h6 class="mb-1">{{ resource.title }}</h6>
+              {% if resource.description %}
+                <p class="mb-2 text-muted">{{ resource.description }}</p>
+              {% endif %}
+              <div class="material-links">
+                <a href="{{ resource.url }}" class="btn btn-sm btn-outline-info" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> Access
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Default message if no materials -->
+      {% unless page.lectures or page.assignments or page.resources %}
+      <div class="alert alert-info">
+        <h5>📚 Course materials will be posted here</h5>
+        <p class="mb-0">Check back soon for lecture slides, assignments, and additional resources.</p>
+      </div>
+      {% endunless %}
+    </div>
+
+    <!-- Back to Teaching -->
+    <div class="mt-5">
+      <a href="/teaching/" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> Back to All Courses
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.material-card {
+  background-color: var(--card-bg, #f9f9f9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.material-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.material-links {
+  margin-top: auto;
+}
+
+.course-info {
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.course-meta .badge {
+  font-size: 0.9em;
+}
+
+.material-category {
+  border-left: 4px solid #007bff;
+  padding-left: 1rem;
+}
+
+/* Dark mode compatibility */
+html[data-theme="dark"] .material-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+html[data-theme="dark"] .course-info {
+  border-bottom-color: #495057;
+}
+
+html[data-theme="dark"] .material-category {
+  border-left-color: #90caf9;
+}
+</style>
