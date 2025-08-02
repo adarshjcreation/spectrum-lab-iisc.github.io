@@ -7,8 +7,8 @@ course_id: "e9-213"
 nav: false
 
 lectures:
-  - title: "Lecture 1: Vector spaces, basis functions"
-    description: "Overview of digital signal processing, sampling theorem, and basic concepts"
+  - title: "Lecture 1: Introduction, mathematical preliminaries"
+    description:
     slides: "/assets/teaching/e9-213/Lec1.pdf"
   
   # - title: "Z-Transform and System Analysis"
@@ -39,7 +39,7 @@ lectures:
 #     due_date: "March 15, 2024"
 
 resources:
-  - title: "Time-Frequency Analysis by Leon Cohen"
+  - title: "Time-Frequency Analysis, by Leon Cohen"
     url: "https://www.amazon.in/Time-Frequency-Analysis-Applications-Prentice-Hall/dp/0135945321"
 
   - title: "A Wavelet Tour of Signal Processing: The Sparse Way, by Stephane Mallat"
@@ -49,5 +49,10 @@ resources:
     description: "Documentation and examples for MATLAB DSP functions."
     url: "https://www.mathworks.com/help/signal/"
 ---
+
+<div style="border: 3px solid #e67e22; background-color: #fff8e1; padding: 24px; border-radius: 8px; margin: 32px 0; font-size: 1.2em; color: black;">
+<strong style="color: black;">Important Announcement:</strong><br>
+First class is on Aug. 5, 2025 from 11:40 AM, EE C240. Please register for the course on SAP or send an email to <a href="mailto:css@iisc.ac.in">css@iisc.ac.in</a>.
+</div>
 
 {% include course-materials.liquid %}
