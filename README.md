@@ -25,11 +25,10 @@ To add a person to the website:
 
 3. **Upload an Image**: Place the image in the appropriate category folder within `assets/img/people/`:
    - `assets/img/people/phd/` for PhD Students
-   - `assets/img/people/msc/` for MSc Students
    - `assets/img/people/mtech/` for M.Tech Students
    - `assets/img/people/alumni/` for Alumni
-   - `assets/img/people/undergraduates/` for Undergraduates
-   - `assets/img/people/lab_director/` for Lab Director
+   - `assets/img/people/project-associates/` for Project Associates
+**Necessarily make the image square**
 
 4. **Category**: You can categorize people as "PhD Students", "MSc Students", "M.Tech Students", "Alumni", "Undergraduates", or "Lab Director". Add accordingly under `category`.
 
