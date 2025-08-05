@@ -3,7 +3,7 @@ layout: page
 firstname: Pritam
 lastname: Kumar
 description: MTech AI 
-img: assets/img/people/msc/pritam.png
+img: assets/img/people/mtech/pritam.png
 redirect: https://www.linkedin.com/in/pritam-kumar-1b0982182/
 linkedin_username: Pritam Kumar
 github_username: pritam1102
