@@ -11,18 +11,18 @@ lectures:
     description:
     slides: "/assets/teaching/e9-213/Lec1.pdf"
   
-  # - title: "Z-Transform and System Analysis"
-  #   description: "Z-transform properties, inverse Z-transform, and system analysis"
-  #   slides: "/assets/teaching/dsp/lecture2_slides.pdf"
-  #   video: "https://example.com/lecture2_video"
+  - title: "Lecture 2: Fourier transform, convolution"
+    # description: "Z-transform properties, inverse Z-transform, and system analysis"
+    # slides: "/assets/teaching/dsp/lecture2_slides.pdf"
+    # video: "https://example.com/lecture2_video"
   
   # - title: "Digital Filters"
   #   description: "FIR and IIR filter design, frequency response analysis"
   #   slides: "/assets/teaching/dsp/lecture3_slides.pdf"
   #   notes: "/assets/teaching/dsp/lecture3_notes.pdf"
 
-# assignments:
-#   - title: "Assignment 1: Sampling and Aliasing"
+assignments:
+  - title: "Assignment 1"
 #     description: "Problems on sampling theorem, aliasing effects, and reconstruction"
 #     pdf: "/assets/teaching/dsp/assignment1.pdf"
 #     solution: "/assets/teaching/dsp/assignment1_solution.pdf"
@@ -50,9 +50,9 @@ resources:
     url: "https://www.mathworks.com/help/signal/"
 ---
 
-<div style="border: 3px solid #e67e22; background-color: #fff8e1; padding: 24px; border-radius: 8px; margin: 32px 0; font-size: 1.2em; color: black;">
+<!-- <div style="border: 3px solid #e67e22; background-color: #fff8e1; padding: 24px; border-radius: 8px; margin: 32px 0; font-size: 1.2em; color: black;">
 <strong style="color: black;">Important Announcement:</strong><br>
 First class is on Aug. 5, 2025 from 11:40 AM, EE C240. Please register for the course on SAP or send an email to <a href="mailto:css@iisc.ac.in">css@iisc.ac.in</a>.
-</div>
+</div> -->
 
 {% include course-materials.liquid %}
