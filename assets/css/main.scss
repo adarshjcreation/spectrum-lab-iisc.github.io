@@ -28,8 +28,8 @@ $max-content-width: {{ site.max_width }};
 @import "mathpazo-fonts";
 
 * {
-font-family: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
-};
+  font-family: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
+}
 
 img.navbar {
   height: 2.5em;

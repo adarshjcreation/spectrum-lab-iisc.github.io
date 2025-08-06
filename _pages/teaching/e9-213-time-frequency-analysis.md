@@ -8,10 +8,11 @@ nav: false
 
 lectures:
   - title: "Lecture 1: Introduction, mathematical preliminaries"
-    description:
     slides: "/assets/teaching/e9-213/Lec1.pdf"
+    description:
   
-  - title: "Lecture 2: Fourier transform, convolution"
+  - title: "Lecture 2: The Fourier transform, convolution"
+    slides: "/assets/teaching/e9-213/Lec2.pdf"
     # description: "Z-transform properties, inverse Z-transform, and system analysis"
     # slides: "/assets/teaching/dsp/lecture2_slides.pdf"
     # video: "https://example.com/lecture2_video"
