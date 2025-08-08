@@ -1,0 +1,13 @@
+---
+layout: about
+firstname: Indranil
+lastname: Patra
+description: MTech Signal Processing
+img: path/to/image.jpg # Ensure this path is correct
+redirect: https://indranilpatra.vercel.app/
+linkedin_username: indranilpatra
+github_username: simplyrin2
+email: indranilp@iisc.ac.in
+category: M.Tech Students
+show: true
+---
