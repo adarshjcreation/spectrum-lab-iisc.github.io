@@ -3,7 +3,7 @@ layout: about
 firstname: Indranil
 lastname: Patra
 description: MTech Signal Processing
-img: path/to/image.jpg # Ensure this path is correct
+img: assets/img/people/mtech/indranil.jpg
 redirect: https://indranilpatra.vercel.app/
 linkedin_username: indranilpatra
 github_username: simplyrin2
