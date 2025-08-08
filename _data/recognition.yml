@@ -1,3 +1,13 @@
+- name: "Abhishek S. B. and Abijith J. Kamath"
+  award: "Qualcomm Innovation Fellowship"
+  year: "2025"
+  category: "Award"
+
+- name: "Nygel George Thomas"
+  award: "Qualcomm Innovation Fellowship"
+  year: "2025"
+  category: "Award"
+
 - name: "Abijith Jagannath Kamath"
   award: "Outstanding Teaching Assistant Award"
   year: "2024"
@@ -5,12 +15,27 @@
 
 - name: "Nishanth Shetty"
   award: "Qualcomm Innovation Fellowship"
-  year: "2023, 2024"
+  year: "2024"
+  category: "Award"
+
+- name: "Nishanth Shetty"
+  award: "Qualcomm Innovation Fellowship"
+  year: "2024"
+  category: "Award"
+
+- name: "Nishanth Shetty"
+  award: "Qualcomm Innovation Fellowship"
+  year: "2023"
   category: "Award"
 
 - name: "Nygel George Thomas"
   award: "Qualcomm Innovation Fellowship"
   year: "2024"
+  category: "Award"
+
+- name: "Nishanth Shetty"
+  award: "Prime Minister's Research Fellowship"
+  year: "2022"
   category: "Award"
 
 - name: "Nareddy Kartheek Kumar Reddy"
