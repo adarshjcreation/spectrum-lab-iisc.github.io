@@ -6,9 +6,9 @@ subtitle:
 nav_order: 0
 
 profile:
-  align: left
-  image: ucmllogo-text.svg
-  name: Calgary ML Lab
+  align:
+  image:
+  name:
   image_circular: false # crops the image to make it circular
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -18,7 +18,7 @@ announcements:
   enabled: true # includes a list of news items
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 3 # leave blank to include all the news in the `_news` folder
-display_categories: [Lab Director, PhD Students, M.Tech Students]
+display_categories: [Lab Director, PhD Students, M.Tech Students, Project Associates]
 latest_posts:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
