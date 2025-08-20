@@ -18,7 +18,7 @@ announcements:
   enabled: true # includes a list of news items
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 3 # leave blank to include all the news in the `_news` folder
-display_categories: [Lab Director, PhD Students, M.Tech Students, Project Associates]
+display_categories: [Lab Director, Administrator, PhD Students, Project Associates, M.Tech Students]
 latest_posts:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
